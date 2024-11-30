@@ -12,10 +12,7 @@ public class Profesor extends Persoana {
 
     @Override
     public String toString() {
-        return "Profesor{" +
-                "nume='" + nume + '\'' +
-                ", prenume='" + prenume + '\'' +
-                '}';
+        return nume+" "+prenume;
     }
 
 

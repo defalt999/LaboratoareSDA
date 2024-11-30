@@ -63,6 +63,7 @@ public class Curs implements OperatiiCurs{
     }
 
     public void NoteazaStudent(Student deNotat,Integer nota){
+
         notee.put(deNotat,nota);
     }
 
