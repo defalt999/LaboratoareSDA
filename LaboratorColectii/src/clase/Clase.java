@@ -11,6 +11,7 @@ public class Clase {
         Profesor profi1=new Profesor("Sebastian","Dorobantu");
         Student extra=new Student("Colegu","Nou",12);
         Student extra1=new Student("Colegu","Mai nou",12);
+        Student studs=new Student("Marian","Cosmin",4);
 
 
         Curs curs1=new Curs("Curs1","Descriere",profi1,stu1);
@@ -31,8 +32,12 @@ public class Clase {
 //        curs2.CalculeazaMedia();
 
 
-    csvuri.ScrieStud(extra1);
-        System.out.println(csvuri.CitireStudenti());
+  //  csvuri.ScrieStud(extra1);
+   // csvuri.ScrieStud(studs);
+
+    csvuri.CitesteDate();
+
+
 
 
 

@@ -37,7 +37,7 @@ public class Curs implements OperatiiCurs{
 
 
     public void AdaugaStudent(Student deAdaugat){
-       studenti.add(deAdaugat);
+        studenti.add(deAdaugat);
     }
     public void StergeStudent(Student deSters){
         studenti.remove(deSters);
@@ -73,7 +73,7 @@ public class Curs implements OperatiiCurs{
             Integer nota = entry.getValue();
             System.out.println(student+" "+nota);
         }
-        
+
     }
 
     public void CalculeazaMedia(){
@@ -89,4 +89,13 @@ public class Curs implements OperatiiCurs{
     }
 
 
+    @Override
+    public String toString() {
+        return "Curs{" +
+                "studenti=" + studenti +
+                ", profesor=" + profesor +
+                ", descriere='" + descriere + '\'' +
+                ", nume='" + nume + '\'' +
+                '}';
+    }
 }

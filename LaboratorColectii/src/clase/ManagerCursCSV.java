@@ -24,6 +24,24 @@ public class ManagerCursCSV extends ManagerCursuri implements OperatiiManagerCur
     public void CitesteDate(){
         List<Student> students=CitireStudenti();
         List<Profesor> profesors=CitireProfesori();
+        List<Curs> cursuri=PopuleazaCurs(students,profesors);
+        try {
+            File f = new File(outPath);
+            BufferedWriter bw = new BufferedWriter(new FileWriter(f,true));
+            try {
+                bw.write(cursuri.get(0) + "\r\n"+cursuri.get(1) + "\r\n");
+                bw.flush();
+            } catch (IOException e) {
+                System.out.println(e);
+            } finally {
+                bw.close();
+            }
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+
+
+
         
     }
 
@@ -87,8 +105,36 @@ public class ManagerCursCSV extends ManagerCursuri implements OperatiiManagerCur
             System.out.println(ex);
         }
     }
-    public void PopuleazaCurs(List<Profesor> profi,List<Student> studs){
-        
+    public List<Curs> PopuleazaCurs(List<Student> studenti, List<Profesor> profesori){
+
+        List<Curs> cursuri = new ArrayList<Curs>();
+        try {
+            int contor=0;
+            Student[] studentz=new Student[studenti.size()];
+            for (int i = 0; i < studenti.size(); i++)
+                studentz[i] = studenti.get(i);
+
+            File f = new File(cursPath);
+            BufferedReader br = new BufferedReader(new FileReader(f));
+            String line = br.readLine();
+            if (line != null) {
+                line = br.readLine();
+            }
+            while (line != null) {
+                String[] splituri = line.split(",");
+                Curs deAdaugat= new Curs(splituri[0],splituri[1],profesori.get(contor),studentz);
+                cursuri.add(deAdaugat);
+                contor++;
+                line = br.readLine();
+            }
+
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+
+
+
+        return cursuri;
 
     }
 

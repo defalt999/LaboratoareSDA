@@ -1,4 +1,4 @@
-Colegu,Nou,12
-Colegu,Mai nou,12
-Colegu,Mai nou,12
-Colegu,Mai nou,12
+Curs{studenti=[Bunoiu George, Bunea Coxmin, Bratosin Denis], profesor=Ion Ion, descriere='Cursul este naspa', nume='Teoria Sistemelor'}
+Curs{studenti=[Bunoiu George, Bunea Coxmin, Bratosin Denis], profesor=Marin Marin, descriere=' Cursul e foarte naspa', nume='Analiza Matematica'}
+Curs{studenti=[Bunoiu George, Bunea Coxmin, Bratosin Denis], profesor=Ion Ion, descriere='Cursul este naspa', nume='Teoria Sistemelor'}
+Curs{studenti=[Bunoiu George, Bunea Coxmin, Bratosin Denis], profesor=Marin Marin, descriere=' Cursul e foarte naspa', nume='Analiza Matematica'}
